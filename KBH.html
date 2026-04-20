@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KBH Games Unblocked – Free Online Games</title>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #0f1117;
+      --surface:   #1a1d27;
+      --card:      #22263a;
+      --accent:    #e84393;
+      --accent2:   #7c3aed;
+      --text:      #e8eaf0;
+      --muted:     #8b8fa8;
+      --border:    #2e3248;
+      --radius:    10px;
+      --shadow:    0 4px 18px rgba(0,0,0,.45);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Top Banner ───────────────────────────────────────────── */
+    .top-banner {
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      text-align: center;
+      padding: 6px 12px;
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .4px;
+    }
+
+    /* ── Header ───────────────────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .logo {
+      font-size: 1.55rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .search-wrap {
+      flex: 1;
+      max-width: 480px;
+      position: relative;
+    }
+    .search-wrap input {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 8px 16px 8px 40px;
+      color: var(--text);
+      font-size: .92rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .search-wrap .icon {
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 1rem;
+      pointer-events: none;
+    }
+    .header-links {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+    .header-links a {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: .85rem;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .header-links a:hover { background: var(--card); }
+    .btn-play {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff !important;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    /* ── Category Nav ─────────────────────────────────────────── */
+    .cat-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .cat-nav::-webkit-scrollbar { display: none; }
+    .cat-nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 4px;
+      height: 46px;
+      align-items: center;
+    }
+    .cat-btn {
+      white-space: nowrap;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: .83rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      transition: all .18s;
+    }
+    .cat-btn:hover, .cat-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Main Layout ──────────────────────────────────────────── */
+    .main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* ── Hero Banner ──────────────────────────────────────────── */
+    .hero {
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #1a0533 0%, #0d1a40 50%, #0f1117 100%);
+      border: 1px solid var(--border);
+      padding: 36px 32px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 340px; height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,67,147,.18), transparent 70%);
+      right: -60px; top: -80px;
+      pointer-events: none;
+    }
+    .hero-text h1 { font-size: 2rem; font-weight: 800; line-height: 1.2; }
+    .hero-text h1 span { color: var(--accent); }
+    .hero-text p { color: var(--muted); margin-top: 10px; font-size: .95rem; max-width: 440px; }
+    .hero-text .hero-btns { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .hero-btns a {
+      padding: 10px 22px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: opacity .2s;
+    }
+    .hero-btns a:hover { opacity: .85; }
+    .hero-btns .btn-primary { background: var(--accent); color: #fff; }
+    .hero-btns .btn-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+    .hero-emoji { font-size: 5rem; flex-shrink: 0; }
+
+    /* ── Section Heading ──────────────────────────────────────── */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-head h2 { font-size: 1.15rem; font-weight: 700; }
+    .section-head h2 span { color: var(--accent); }
+    .section-head a { color: var(--accent); font-size: .85rem; font-weight: 600; }
+    .section-head a:hover { text-decoration: underline; }
+
+    /* ── Game Grid ────────────────────────────────────────────── */
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .game-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform .18s, box-shadow .18s, border-color .18s;
+      position: relative;
+    }
+    .game-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
+    }
+    .game-card .thumb {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      background: var(--surface);
+    }
+    .game-card .thumb-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      background: linear-gradient(135deg, var(--surface), var(--card));
+    }
+    .game-card .info {
+      padding: 10px 12px 12px;
+    }
+    .game-card .info .name {
+      font-size: .88rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .game-card .info .meta {
+      font-size: .75rem;
+      color: var(--muted);
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-size: .7rem;
+      font-weight: 700;
+      background: var(--accent2);
+      color: #fff;
+    }
+    .badge.hot { background: var(--accent); }
+    .badge.new { background: #16a34a; }
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .18s;
+      border-radius: var(--radius);
+    }
+    .play-overlay svg { width: 48px; height: 48px; fill: #fff; filter: drop-shadow(0 2px 8px rgba(0,0,0,.6)); }
+    .game-card:hover .play-overlay { opacity: 1; }
+
+    /* ── Modal / Game Viewer ──────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--surface);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 960px;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,.7);
+    }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+    }
+    .modal-header .modal-title { font-size: 1.05rem; font-weight: 700; flex: 1; }
+    .modal-header .modal-cat { color: var(--muted); font-size: .82rem; }
+    .modal-close {
+      background: var(--card);
+      border: none;
+      color: var(--text);
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s;
+    }
+    .modal-close:hover { background: var(--accent); }
+    .modal-frame {
+      flex: 1;
+      min-height: 0;
+    }
+    .modal-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      border: none;
+      display: block;
+    }
+    .modal-footer {
+      padding: 10px 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .modal-footer a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .modal-footer a:hover { text-decoration: underline; }
+    .fullscreen-btn {
+      margin-left: auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: .82rem;
+      font-weight: 600;
+      transition: background .15s;
+    }
+    .fullscreen-btn:hover { background: var(--accent2); border-color: var(--accent2); }
+
+    /* ── Featured Row ─────────────────────────────────────────── */
+    .featured-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .featured-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      min-height: 160px;
+      display: flex;
+      align-items: flex-end;
+      background: var(--card);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .featured-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .featured-card .fc-bg {
+      position: absolute;
+      inset: 0;
+      font-size: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: .25;
+    }
+    .featured-card .fc-info {
+      position: relative;
+      padding: 14px 16px;
+      background: linear-gradient(0deg, rgba(0,0,0,.75) 0%, transparent 100%);
+      width: 100%;
+    }
+    .featured-card .fc-name { font-weight: 800; font-size: 1rem; }
+    .featured-card .fc-desc { font-size: .78rem; color: var(--muted); margin-top: 3px; }
+    .featured-card .fc-badge { margin-top: 6px; }
+
+    /* ── Stats Bar ────────────────────────────────────────────── */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .stat-card .val { font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+    .stat-card .lbl { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── Footer ───────────────────────────────────────────────── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    .footer-col h4 { font-size: .9rem; font-weight: 700; margin-bottom: 10px; color: var(--accent); }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 6px; }
+    .footer-col ul li a { font-size: .83rem; color: var(--muted); transition: color .15s; }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 20px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+
+    /* ── No Results ───────────────────────────────────────────── */
+    .no-results {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--muted);
+      display: none;
+    }
+    .no-results .nr-icon { font-size: 3rem; margin-bottom: 12px; }
+
+    /* ── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hero { flex-direction: column; text-align: center; padding: 24px 18px; }
+      .hero-emoji { font-size: 3.5rem; }
+      .hero-text h1 { font-size: 1.4rem; }
+      .hero-btns { justify-content: center; }
+      .header-links { display: none; }
+      .game-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="top-banner">🎮 100% Free &amp; Unblocked — Play Anywhere, Anytime!</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="logo">KBH Games</div>
+    <div class="search-wrap">
+      <span class="icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search games…" oninput="filterGames()" />
+    </div>
+    <nav class="header-links">
+      <a href="#popular">Popular</a>
+      <a href="#new">New</a>
+      <a href="#" class="btn-play">▶ Random Game</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Category Nav -->
+<nav class="cat-nav">
+  <div class="cat-nav-inner" id="catNav">
+    <button class="cat-btn active" onclick="filterCategory('all', this)">All</button>
+    <button class="cat-btn" onclick="filterCategory('action', this)">⚔️ Action</button>
+    <button class="cat-btn" onclick="filterCategory('puzzle', this)">🧩 Puzzle</button>
+    <button class="cat-btn" onclick="filterCategory('sports', this)">⚽ Sports</button>
+    <button class="cat-btn" onclick="filterCategory('racing', this)">🏎️ Racing</button>
+    <button class="cat-btn" onclick="filterCategory('shooting', this)">🔫 Shooting</button>
+    <button class="cat-btn" onclick="filterCategory('arcade', this)">🕹️ Arcade</button>
+    <button class="cat-btn" onclick="filterCategory('multiplayer', this)">👥 Multiplayer</button>
+    <button class="cat-btn" onclick="filterCategory('adventure', this)">🗺️ Adventure</button>
+    <button class="cat-btn" onclick="filterCategory('strategy', this)">♟️ Strategy</button>
+    <button class="cat-btn" onclick="filterCategory('music', this)">🎵 Music</button>
+    <button class="cat-btn" onclick="filterCategory('casual', this)">😊 Casual</button>
+    <button class="cat-btn" onclick="filterCategory('io', this)">🌐 .io Games</button>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Play <span>Unblocked Games</span><br>Anywhere, Anytime</h1>
+      <p>Hundreds of free HTML5 games — no downloads, no sign-ups, no blocks. Works at school, work, or home.</p>
+      <div class="hero-btns">
+        <a href="#popular" class="btn-primary">🔥 Popular Games</a>
+        <a href="#new" class="btn-secondary">✨ New Games</a>
+      </div>
+    </div>
+    <div class="hero-emoji">🎮</div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-card"><div class="val">500+</div><div class="lbl">Free Games</div></div>
+    <div class="stat-card"><div class="val">0</div><div class="lbl">Downloads Needed</div></div>
+    <div class="stat-card"><div class="val">100%</div><div class="lbl">Unblocked</div></div>
+    <div class="stat-card"><div class="val">24/7</div><div class="lbl">Always Online</div></div>
+  </div>
+
+  <!-- Featured -->
+  <div class="section-head" id="popular">
+    <h2>⭐ <span>Featured</span> Games</h2>
+  </div>
+  <div class="featured-row">
+    <div class="featured-card" onclick="openGame('Friday Night Funkin\'','music','https://kbhgames.com/game/friday-night-funkin')">
+      <div class="fc-bg">🎵</div>
+      <div class="fc-info">
+        <div class="fc-name">Friday Night Funkin'</div>
+        <div class="fc-desc">The legendary rhythm battle game</div>
+        <div class="fc-badge"><span class="badge hot">HOT</span></div>
+      </div>
+    </div>
+    <div class="featured-card" onclick="openGame('Super Smash Flash 2','action','https://supersmashflash.com/play/ssf2/')">
+      <div class="fc-bg">⚔️</div>
+      <div class="fc-info">
+        <div class="fc-name">Super Smash Flash 2</div>
+        <div class="fc-desc">Epic platform fighter</div>
+        <div class="fc-badge"><span class="badge">TOP RATED</span></div>
+      </div>
+    </div>
+    <div class="featured-card" onclick="openGame('Slope','arcade','https://slope-game.github.io/')">
+      <div class="fc-bg">🎱</div>
+      <div class="fc-info">
+        <div class="fc-name">Slope</div>
+        <div class="fc-desc">Roll down an endless 3D slope</div>
+        <div class="fc-badge"><span class="badge hot">HOT</span></div>
+      </div>
+    </div>
+    <div class="featured-card" onclick="openGame('1v1.LOL','shooting','https://1v1.lol/')">
+      <div class="fc-bg">🔫</div>
+      <div class="fc-info">
+        <div class="fc-name">1v1.LOL</div>
+        <div class="fc-desc">Build &amp; battle shooter</div>
+        <div class="fc-badge"><span class="badge new">NEW</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popular Games Grid -->
+  <div class="section-head">
+    <h2>🔥 <span>Popular</span> Games</h2>
+    <a href="#">View All →</a>
+  </div>
+  <div class="game-grid" id="gameGrid">
+
+    <!-- Action -->
+    <div class="game-card" data-cat="action" data-name="stickman hook" onclick="openGame('Stickman Hook','action','https://stickman-hook.com/')">
+      <div class="thumb-placeholder">🕷️</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Stickman Hook</div><div class="meta"><span class="badge">Action</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="action" data-name="getting over it" onclick="openGame('Getting Over It','action','https://gettingoverit.io/')">
+      <div class="thumb-placeholder">⛏️</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Getting Over It</div><div class="meta"><span class="badge">Action</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="action" data-name="vex 5" onclick="openGame('Vex 5','action','https://www.crazygames.com/embed/vex-5')">
+      <div class="thumb-placeholder">🏃</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Vex 5</div><div class="meta"><span class="badge">Action</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="action" data-name="fireboy and watergirl" onclick="openGame('Fireboy & Watergirl','action','https://www.coolmathgames.com/0-fireboy-and-watergirl-in-the-forest-temple')">
+      <div class="thumb-placeholder">🔥</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Fireboy &amp; Watergirl</div><div class="meta"><span class="badge">Action</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <!-- Puzzle -->
+    <div class="game-card" data-cat="puzzle" data-name="2048" onclick="openGame('2048','puzzle','https://play2048.co/')">
+      <div class="thumb-placeholder">🔢</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">2048</div><div class="meta"><span class="badge">Puzzle</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="puzzle" data-name="wordle" onclick="openGame('Wordle','puzzle','https://wordleunlimited.org/')">
+      <div class="thumb-placeholder">📝</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Wordle Unlimited</div><div class="meta"><span class="badge">Puzzle</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="puzzle" data-name="tetris" onclick="openGame('Tetris','puzzle','https://tetris.com/play-tetris')">
+      <div class="thumb-placeholder">🟦</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Tetris</div><div class="meta"><span class="badge">Puzzle</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="puzzle" data-name="sudoku" onclick="openGame('Sudoku','puzzle','https://sudoku.com/')">
+      <div class="thumb-placeholder">🔣</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Sudoku</div><div class="meta"><span class="badge">Puzzle</span></div></div>
+    </div>
+
+    <!-- Sports -->
+    <div class="game-card" data-cat="sports" data-name="basketball stars" onclick="openGame('Basketball Stars','sports','https://www.crazygames.com/embed/basketball-stars')">
+      <div class="thumb-placeholder">🏀</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Basketball Stars</div><div class="meta"><span class="badge">Sports</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="sports" data-name="soccer skills" onclick="openGame('Soccer Skills','sports','https://www.miniplay.com/embed/soccer-skills-world-cup')">
+      <div class="thumb-placeholder">⚽</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Soccer Skills</div><div class="meta"><span class="badge">Sports</span></div></div>
+    </div>
+
+    <!-- Racing -->
+    <div class="game-card" data-cat="racing" data-name="madalin stunt cars" onclick="openGame('Madalin Stunt Cars 2','racing','https://madalinstuntcars2.com/')">
+      <div class="thumb-placeholder">🏎️</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Madalin Stunt Cars 2</div><div class="meta"><span class="badge">Racing</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="racing" data-name="drift hunters" onclick="openGame('Drift Hunters','racing','https://drifthunters.io/')">
+      <div class="thumb-placeholder">💨</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Drift Hunters</div><div class="meta"><span class="badge">Racing</span></div></div>
+    </div>
+
+    <!-- Shooting -->
+    <div class="game-card" data-cat="shooting" data-name="shell shockers" onclick="openGame('Shell Shockers','shooting','https://shellshock.io/')">
+      <div class="thumb-placeholder">🥚</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Shell Shockers</div><div class="meta"><span class="badge">Shooting</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="shooting" data-name="krunker" onclick="openGame('Krunker.io','shooting','https://krunker.io/')">
+      <div class="thumb-placeholder">🎯</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Krunker.io</div><div class="meta"><span class="badge">Shooting</span></div></div>
+    </div>
+
+    <!-- Arcade -->
+    <div class="game-card" data-cat="arcade" data-name="slope" onclick="openGame('Slope','arcade','https://slope-game.github.io/')">
+      <div class="thumb-placeholder">🎱</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Slope</div><div class="meta"><span class="badge">Arcade</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="arcade" data-name="run 3" onclick="openGame('Run 3','arcade','https://www.coolmathgames.com/0-run-3')">
+      <div class="thumb-placeholder">🌀</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Run 3</div><div class="meta"><span class="badge">Arcade</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="arcade" data-name="geometry dash" onclick="openGame('Geometry Dash Lite','arcade','https://geometrydashgame.org/')">
+      <div class="thumb-placeholder">🔷</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Geometry Dash</div><div class="meta"><span class="badge">Arcade</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="arcade" data-name="flappy bird" onclick="openGame('Flappy Bird','arcade','https://flappybird.io/')">
+      <div class="thumb-placeholder">🐦</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Flappy Bird</div><div class="meta"><span class="badge">Arcade</span></div></div>
+    </div>
+
+    <!-- Multiplayer / .io -->
+    <div class="game-card" data-cat="multiplayer io" data-name="agar.io" onclick="openGame('Agar.io','io','https://agar.io/')">
+      <div class="thumb-placeholder">🔵</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Agar.io</div><div class="meta"><span class="badge">Multiplayer</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="multiplayer io" data-name="slither.io" onclick="openGame('Slither.io','io','https://slither.io/')">
+      <div class="thumb-placeholder">🐍</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Slither.io</div><div class="meta"><span class="badge">Multiplayer</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="multiplayer io" data-name="diep.io" onclick="openGame('Diep.io','io','https://diep.io/')">
+      <div class="thumb-placeholder">🔫</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Diep.io</div><div class="meta"><span class="badge">Multiplayer</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="multiplayer io" data-name="paper io" onclick="openGame('Paper.io 2','io','https://paper-io.com/')">
+      <div class="thumb-placeholder">📄</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Paper.io 2</div><div class="meta"><span class="badge">Multiplayer</span></div></div>
+    </div>
+
+    <!-- Adventure -->
+    <div class="game-card" data-cat="adventure" data-name="minecraft classic" onclick="openGame('Minecraft Classic','adventure','https://classic.minecraft.net/')">
+      <div class="thumb-placeholder">⛏️</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Minecraft Classic</div><div class="meta"><span class="badge">Adventure</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="adventure" data-name="cookie clicker" onclick="openGame('Cookie Clicker','casual','https://orteil.dashnet.org/cookieclicker/')">
+      <div class="thumb-placeholder">🍪</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Cookie Clicker</div><div class="meta"><span class="badge">Casual</span></div></div>
+    </div>
+
+    <!-- Strategy -->
+    <div class="game-card" data-cat="strategy" data-name="bloons tower defense" onclick="openGame('Bloons TD 5','strategy','https://www.ninjakiwi.com/Games/Tower-Defense/Play/Bloons-Tower-Defense-5.html')">
+      <div class="thumb-placeholder">🎈</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Bloons TD 5</div><div class="meta"><span class="badge">Strategy</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="strategy" data-name="chess" onclick="openGame('Chess','strategy','https://www.chess.com/play/online')">
+      <div class="thumb-placeholder">♟️</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Chess</div><div class="meta"><span class="badge">Strategy</span></div></div>
+    </div>
+
+    <!-- Music -->
+    <div class="game-card" data-cat="music" data-name="friday night funkin" onclick="openGame('Friday Night Funkin\'','music','https://kbhgames.com/game/friday-night-funkin')">
+      <div class="thumb-placeholder">🎵</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Friday Night Funkin'</div><div class="meta"><span class="badge">Music</span> <span class="badge hot">HOT</span></div></div>
+    </div>
+
+    <!-- Casual -->
+    <div class="game-card" data-cat="casual" data-name="snake" onclick="openGame('Snake','casual','https://playsnake.org/')">
+      <div class="thumb-placeholder">🐍</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Snake</div><div class="meta"><span class="badge">Casual</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="casual" data-name="minesweeper" onclick="openGame('Minesweeper','casual','https://minesweeper.online/')">
+      <div class="thumb-placeholder">💣</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Minesweeper</div><div class="meta"><span class="badge">Casual</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="casual" data-name="solitaire" onclick="openGame('Solitaire','casual','https://www.solitaire.org/')">
+      <div class="thumb-placeholder">🃏</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Solitaire</div><div class="meta"><span class="badge">Casual</span></div></div>
+    </div>
+
+    <div class="game-card" data-cat="casual" data-name="pacman" onclick="openGame('Pac-Man','arcade','https://freepacman.org/')">
+      <div class="thumb-placeholder">👾</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Pac-Man</div><div class="meta"><span class="badge">Arcade</span></div></div>
+    </div>
+
+  </div><!-- /game-grid -->
+
+  <!-- No Results -->
+  <div class="no-results" id="noResults">
+    <div class="nr-icon">🎮</div>
+    <p>No games found. Try a different search!</p>
+  </div>
+
+  <!-- New Games Section -->
+  <div class="section-head" id="new">
+    <h2>✨ <span>New</span> Games</h2>
+    <a href="#">View All →</a>
+  </div>
+  <div class="game-grid">
+
+    <div class="game-card" onclick="openGame('Retro Bowl','sports','https://retrobowl.me/')">
+      <div class="thumb-placeholder">🏈</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Retro Bowl</div><div class="meta"><span class="badge">Sports</span> <span class="badge new">NEW</span></div></div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Monkey Mart','casual','https://www.crazygames.com/embed/monkey-mart')">
+      <div class="thumb-placeholder">🐒</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Monkey Mart</div><div class="meta"><span class="badge">Casual</span> <span class="badge new">NEW</span></div></div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Capybara Clicker','casual','https://capybaraclicker.io/')">
+      <div class="thumb-placeholder">🐾</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Capybara Clicker</div><div class="meta"><span class="badge">Casual</span> <span class="badge new">NEW</span></div></div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Connections','puzzle','https://connections.swellgarfo.com/')">
+      <div class="thumb-placeholder">🔗</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Connections</div><div class="meta"><span class="badge">Puzzle</span> <span class="badge new">NEW</span></div></div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Infinite Craft','casual','https://neal.fun/infinite-craft/')">
+      <div class="thumb-placeholder">⚗️</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Infinite Craft</div><div class="meta"><span class="badge">Casual</span> <span class="badge new">NEW</span></div></div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Deadshot.io','shooting','https://deadshot.io/')">
+      <div class="thumb-placeholder">🎯</div>
+      <div class="play-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="info"><div class="name">Deadshot.io</div><div class="meta"><span class="badge">Shooting</span> <span class="badge new">NEW</span></div></div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>KBH Games</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Submit a Game</a></li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#" onclick="filterCategory('action',null)">Action Games</a></li>
+        <li><a href="#" onclick="filterCategory('puzzle',null)">Puzzle Games</a></li>
+        <li><a href="#" onclick="filterCategory('racing',null)">Racing Games</a></li>
+        <li><a href="#" onclick="filterCategory('sports',null)">Sports Games</a></li>
+        <li><a href="#" onclick="filterCategory('shooting',null)">Shooting Games</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Top Games</h4>
+      <ul>
+        <li><a href="#" onclick="openGame('Friday Night Funkin\'','music','https://kbhgames.com/game/friday-night-funkin')">Friday Night Funkin'</a></li>
+        <li><a href="#" onclick="openGame('Slope','arcade','https://slope-game.github.io/')">Slope</a></li>
+        <li><a href="#" onclick="openGame('Shell Shockers','shooting','https://shellshock.io/')">Shell Shockers</a></li>
+        <li><a href="#" onclick="openGame('Minecraft Classic','adventure','https://classic.minecraft.net/')">Minecraft Classic</a></li>
+        <li><a href="#" onclick="openGame('Krunker.io','shooting','https://krunker.io/')">Krunker.io</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">DMCA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 KBH Games Unblocked. All rights reserved.</span>
+    <span>Made with ❤️ for gamers everywhere.</span>
+  </div>
+</footer>
+
+<!-- Game Modal -->
+<div class="modal-overlay" id="gameModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modalTitle">Game</div>
+        <div class="modal-cat" id="modalCat">Category</div>
+      </div>
+      <button class="modal-close" onclick="closeGame()" title="Close">✕</button>
+    </div>
+    <div class="modal-frame">
+      <iframe id="gameFrame" src="" allowfullscreen allow="fullscreen; autoplay"></iframe>
+    </div>
+    <div class="modal-footer">
+      <span>🎮 Playing in browser — no download required</span>
+      <a id="modalLink" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <button class="fullscreen-btn" onclick="goFullscreen()">⛶ Fullscreen</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ── Game Modal ─────────────────────────────────────────────── */
+  function openGame(name, cat, url) {
+    document.getElementById('modalTitle').textContent = name;
+    document.getElementById('modalCat').textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+    document.getElementById('gameFrame').src = url;
+    document.getElementById('modalLink').href = url;
+    document.getElementById('gameModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeGame() {
+    document.getElementById('gameFrame').src = '';
+    document.getElementById('gameModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function goFullscreen() {
+    const frame = document.getElementById('gameFrame');
+    if (frame.requestFullscreen) frame.requestFullscreen();
+    else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+  }
+
+  // Close on overlay click
+  document.getElementById('gameModal').addEventListener('click', function(e) {
+    if (e.target === this) closeGame();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeGame();
+  });
+
+  /* ── Category Filter ────────────────────────────────────────── */
+  let currentCat = 'all';
+
+  function filterCategory(cat, btn) {
+    currentCat = cat;
+    // Update button states
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    applyFilters();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── Search Filter ──────────────────────────────────────────── */
+  function filterGames() {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('#gameGrid .game-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const name = (card.dataset.name || '').toLowerCase();
+      const cat  = (card.dataset.cat  || '').toLowerCase();
+      const matchSearch = !query || name.includes(query) || cat.includes(query);
+      const matchCat    = currentCat === 'all' || cat.includes(currentCat);
+
+      if (matchSearch && matchCat) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  /* ── Random Game ────────────────────────────────────────────── */
+  const allGames = [
+    { name: "Stickman Hook",    cat: "action",    url: "https://stickman-hook.com/" },
+    { name: "2048",             cat: "puzzle",    url: "https://play2048.co/" },
+    { name: "Slope",            cat: "arcade",    url: "https://slope-game.github.io/" },
+    { name: "Shell Shockers",   cat: "shooting",  url: "https://shellshock.io/" },
+    { name: "Slither.io",       cat: "io",        url: "https://slither.io/" },
+    { name: "Agar.io",          cat: "io",        url: "https://agar.io/" },
+    { name: "Minecraft Classic",cat: "adventure", url: "https://classic.minecraft.net/" },
+    { name: "Flappy Bird",      cat: "arcade",    url: "https://flappybird.io/" },
+    { name: "Cookie Clicker",   cat: "casual",    url: "https://orteil.dashnet.org/cookieclicker/" },
+    { name: "Tetris",           cat: "puzzle",    url: "https://tetris.com/play-tetris" },
+    { name: "Snake",            cat: "casual",    url: "https://playsnake.org/" },
+    { name: "Pac-Man",          cat: "arcade",    url: "https://freepacman.org/" },
+    { name: "Krunker.io",       cat: "shooting",  url: "https://krunker.io/" },
+    { name: "Drift Hunters",    cat: "racing",    url: "https://drifthunters.io/" },
+    { name: "Chess",            cat: "strategy",  url: "https://www.chess.com/play/online" },
+  ];
+
+  document.querySelector('.btn-play').addEventListener('click', function(e) {
+    e.preventDefault();
+    const g = allGames[Math.floor(Math.random() * allGames.length)];
+    openGame(g.name, g.cat, g.url);
+  });
+</script>
+</body>
+</html>
